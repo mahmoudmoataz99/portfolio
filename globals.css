@@ -1,0 +1,25 @@
+/* Default dark theme styles */
+body {
+  background-color: #07000f;
+  color: #ffffff;
+}
+
+/* Light theme styles */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Smooth transitions for all themed elements */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+/* Disable transitions for elements that should animate differently */
+.leather-card,
+.godfather-btn {
+  transition-property: all;
+  transition-duration: 0.4s;
+}

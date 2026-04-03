@@ -1,0 +1,195 @@
+export const projects = [
+  {
+    id: 'news-today',
+    slug: 'news-today',
+    title: 'NEWS TODAY',
+    sub: 'Full Stack News App',
+    desc: 'Full-stack news platform with React frontend, NestJS backend, MongoDB database, and Axios for API communication.',
+    tags: ['React', 'Tailwind', 'Axios', 'Nest.JS', 'MongoDB'],
+    color: '#ff00cc',
+    year: '2025',
+    featured: true,
+    emoji: '📰',
+    href: '/projects/news-today',
+    link: 'https://newstoday-client.vercel.app/',
+    source: 'https://github.com/mahmoudmoataz99/news2day'
+  },
+  {
+    id: 'eventbook',
+    slug: 'eventbook',
+    title: 'EVENTBOOK',
+    sub: 'Event Management Platform',
+    desc: 'Full-stack event booking app with React, Swiper carousel, NodeJS/Express backend, and MongoDB.',
+    tags: ['React', 'Tailwind', 'Swiper', 'NodeJS', 'MongoDB', 'Express'],
+    color: '#00ffff',
+    year: '2025',
+    featured: true,
+    emoji: '📅',
+    href: '/projects/eventbook',
+    link: 'https://events-booker.vercel.app/',
+    source: 'https://github.com/mahmoudmoataz99/Events-Booker'
+  },
+  {
+    id: 'adidas-clone',
+    slug: 'adidas-clone',
+    title: 'ADIDAS CLONE',
+    sub: 'E-Commerce UI Clone',
+    desc: 'Pixel-perfect Adidas storefront clone built with Angular and Bootstrap, featuring responsive product pages.',
+    tags: ['Angular', 'Bootstrap'],
+    color: '#f5ff00',
+    year: '2024',
+    featured: false,
+    emoji: '👟',
+    href: '/projects/adidas-clone',
+    link: 'https://adidas-angular.vercel.app/',
+    source: 'https://github.com/mahmoudmoataz99/Events-Booker'
+  },
+  {
+    id: 'jubari-clone',
+    slug: 'jubari-clone',
+    title: 'JUBARI CLONE',
+    sub: 'Travel Agency Clone',
+    desc: 'Responsive travel agency clone built with Angular and Bootstrap.',
+    tags: ['Angular', 'Bootstrap'],
+    color: '#00ff88',
+    year: '2024',
+    featured: false,
+    emoji: '🛍',
+    href: '/projects/jubari-clone',
+    link: 'https://jubari-clone-4z7cvqvsm-mahmoud-moatazs-projects.vercel.app/',
+    source: 'https://github.com/mahmoudmoataz99/jubari-clone'
+  },
+  {
+    id: 'todo-list',
+    slug: 'todo-list',
+    title: 'TODO LIST',
+    sub: 'Task Management App',
+    desc: 'Clean and minimal task management app built with React and Tailwind CSS.',
+    tags: ['React', 'Tailwind'],
+    color: '#8b00ff',
+    year: '2024',
+    featured: false,
+    emoji: '✅',
+    href: '/projects/todo-list',
+    link: 'https://todo-react-lsnk2bqlc-mahmoud-moatazs-projects.vercel.app/',
+    source: 'https://github.com/mahmoudmoataz99/Todo-React'
+  },
+  {
+    id: 'finexo',
+    slug: 'finexo',
+    title: 'FINEXO',
+    sub: 'Finance Landing Page',
+    desc: 'Modern finance-themed landing page with interactive JavaScript components and Bootstrap layout.',
+    tags: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'],
+    color: '#ff6a00',
+    year: '2023',
+    featured: false,
+    emoji: '💹',
+    href: '/projects/finexo',
+    link: 'https://mahmoudmoataz99.github.io/Finexo/',
+    source: 'https://github.com/mahmoudmoataz99/Todo-React'
+  },
+  {
+    id: 'wiki-search',
+    slug: 'wiki-search',
+    title: 'WIKI SEARCH',
+    sub: 'Wikipedia Search Tool',
+    desc: 'Browser-based Wikipedia search tool using the MediaWiki API, built with vanilla JS and Bootstrap.',
+    tags: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'],
+    color: '#c8ff00',
+    year: '2023',
+    featured: false,
+    emoji: '🔍',
+    href: '/projects/wiki-search',
+    link: 'https://mahmoudmoataz99.github.io/Wiki-Search/',
+    source: 'https://github.com/mahmoudmoataz99/Todo-React'
+  },
+  {
+    id: 'little-fashion',
+    slug: 'little-fashion',
+    title: 'LITTLE FASHION',
+    sub: 'Fashion Landing Page',
+    desc: 'Elegant fashion brand landing page with clean HTML/CSS layout and responsive design.',
+    tags: ['HTML', 'CSS'],
+    color: '#ff2d78',
+    year: '2022',
+    featured: false,
+    emoji: '👗',
+    href: '/projects/little-fashion',
+    link: 'https://mahmoudmoataz99.github.io/little-fashion/index.html',
+    source: 'https://images.icon-icons.com/2389/PNG/512/wikipedia_logo_icon_144738.png'
+  },
+]
+
+export const skills = [
+  // Frontend
+  { name: 'React', level: 88, color: '#00ffff', icon: '⚛', category: 'Frontend' },
+  { name: 'Angular', level: 80, color: '#ff2d78', icon: '🅰', category: 'Frontend' },
+  { name: 'Next JS', level: 70, color: '#91ab22', icon: '🅰', category: 'Frontend' },
+  { name: 'TypeScript', level: 82, color: '#c8ff00', icon: 'TS', category: 'Frontend' },
+  { name: 'JavaScript', level: 90, color: '#f5ff00', icon: 'JS', category: 'Frontend' },
+  { name: 'Tailwind', level: 85, color: '#00ffff', icon: '🌊', category: 'Frontend' },
+  { name: 'Bootstrap', level: 88, color: '#8b00ff', icon: '🅱', category: 'Frontend' },
+  { name: 'HTML', level: 95, color: '#ff6a00', icon: '🌐', category: 'Frontend' },
+  { name: 'CSS', level: 90, color: '#ff00cc', icon: '🎨', category: 'Frontend' },
+
+  // Backend
+  { name: 'Node JS', level: 78, color: '#00ff88', icon: '⬡', category: 'Backend' },
+  { name: 'Nest JS', level: 75, color: '#ff2d78', icon: '🐈', category: 'Backend' },
+
+  // Database
+  { name: 'MongoDB', level: 76, color: '#00ff88', icon: '🍃', category: 'Database' },
+  { name: 'MySQL', level: 72, color: '#00ffff', icon: '🐬', category: 'Database' },
+]
+
+export const experience = [
+  {
+    date: '07/2025 – 03/2026',
+    role: 'Frontend Developer',
+    co: 'Info-Tech Global',
+    desc: 'Developing and maintaining web applications with React and NestJS. Focused on performance optimization and seamless API integration.',
+    color: '#c9a84c',
+  },
+  {
+    date: '01/2025 – 03/2025',
+    role: 'React Intern',
+    co: 'ABS.AI',
+    desc: 'Built dynamic web applications using React, collaborating with design teams to create responsive interfaces.',
+    color: '#8b7332',
+  },
+  {
+    date: '09/2024 – 12/2024',
+    role: 'Frontend Intern',
+    co: 'Yearex Group',
+    desc: 'Redesigned company website using Angular, implementing responsive UI components.',
+    color: '#6b1e2a',
+  },
+  {
+    date: '06/2019 – 07/2019',
+    role: 'Summer IT Trainee',
+    co: 'QNB AL-AHLI',
+    desc: 'We got introduced to different sections of the IT department, and we knew more about the ways problems are solved and new technologies of each field.',
+    color: '#6b1e2a',
+  },
+]
+
+export const education = [
+  {
+    date: '11/2023 – 07/2024',
+    certificate: 'Full Stack Diploma',
+    co: 'YAT Learning Center',
+    color: '#c9a84c'
+  },
+  {
+    date: '2018 – 2023',
+    certificate: 'B.Sc. Computer Engineering',
+    co: 'MSA University / Greenwich University',
+    color: '#8b7332',
+  },
+  {
+    date: '2015 – 2018',
+    certificate: 'IGCSE',
+    co: 'Orouba Language Schools',
+    color: '#6b1e2a',
+  }
+]
