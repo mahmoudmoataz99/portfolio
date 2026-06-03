@@ -6,33 +6,47 @@ export default function Education() {
   const ref = useScrollReveal()
 
   return (
-    <section id="education" className="py-16 px-6 relative ">
+    <section id="education" className="py-20 px-6 relative">
       <div className="max-w-3xl mx-auto">
         <div ref={ref} className="sr">
           <div className="chapter-divider">
             <div className="line" />
-            <span className="ornament">⚜️ V ⚜️</span>
+            <div className="spider-logo" />
             <div className="line" />
           </div>
           
-          <h2 className="title-card text-3xl md:text-4xl text-[#f5efdc] font-light mb-16 text-center">
-            The Education
+          <div className="narration-box text-center mb-8">
+            "THE ACADEMY - WHERE IT ALL BEGAN"
+          </div>
+          
+          <h2 className="font-spider text-4xl md:text-5xl mb-12 text-center" style={{ color: 'var(--spider-red)' }}>
+            EDUCATION
           </h2>
           
-          <div className="space-y-6">
-            {education.map((edu, i) => (
-              <div key={edu.date} className="leather-card">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
-                  <div>
-                    <h3 className="font-serif text-xl text-[#c9a84c] mb-1">{edu.certificate}</h3>
-                    <p className="font-serif text-sm">{edu.co}</p>
-                  </div>
-                  <div className="font-serif text-xs text-[#8b7332] whitespace-nowrap">
+          <div className="space-y-5">
+            {education.map((edu, idx) => (
+              <div key={idx} className="comic-panel flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+                <div>
+                  <h3 className="font-spider text-xl" style={{ color: 'var(--spider-red)' }}>
+                    {edu.certificate}
+                  </h3>
+                  <p className="font-comic text-sm" style={{ color: 'var(--spider-blue)' }}>
+                    {edu.co}
+                  </p>
+                </div>
+                <div>
+                  <span className="bam text-xs py-1 px-3" style={{ transform: 'rotate(0deg)' }}>
                     {edu.date}
-                  </div>
+                  </span>
                 </div>
               </div>
             ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <div className="kapow inline-block text-sm">
+              "HONOR ROLL — DEAN'S LIST"
+            </div>
           </div>
         </div>
       </div>

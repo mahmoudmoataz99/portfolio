@@ -1,54 +1,54 @@
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Cinzel, Inter } from 'next/font/google'
+import { Comic_Neue, Montserrat, Bangers } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/sections/Footer'
+import ScrollToTop from '@/components/ui/ScrollToTop'
 
-const cormorant = Cormorant_Garamond({ 
+const comicNeue = Comic_Neue({ 
   subsets: ['latin'], 
-  weight: ['300', '400', '500', '600', '700'], 
-  variable: '--font-cormorant',
-  style: ['normal', 'italic']
+  weight: ['300', '400', '700'], 
+  variable: '--font-comic',
 })
 
-const cinzel = Cinzel({ 
+const montserrat = Montserrat({ 
   subsets: ['latin'], 
-  weight: ['400', '500', '600', '700', '800', '900'], 
-  variable: '--font-cinzel'
+  weight: ['400', '600', '700', '800', '900'], 
+  variable: '--font-montserrat'
 })
 
-const inter = Inter({ 
+const bangers = Bangers({ 
   subsets: ['latin'], 
-  weight: ['300', '400', '500'], 
-  variable: '--font-inter'
+  weight: ['400'], 
+  variable: '--font-spider'
 })
 
 export const metadata: Metadata = {
-  title: { default: 'Mahmoud Moataz — The Portfolio', template: '%s | Eng. Mahmoud' },
-  description: 'Full Stack Developer & Computer Engineer. A legacy of code and craftsmanship.',
-  keywords: ['Full Stack', 'Developer', 'Portfolio', 'Engineer'],
+  title: { default: 'THE AMAZING WEB-DEV', template: '%s | Web-Dev Comics' },
+  description: 'Your Friendly Neighborhood Full Stack Developer! With great code comes great responsibility.',
+  keywords: ['Full Stack', 'Developer', 'Engineer', 'Portfolio', 'Spider-Man', 'Comic', 'Web Developer'],
   authors: [{ name: 'Mahmoud Moataz' }],
   openGraph: {
-    title: 'Mahmoud Moataz — The Portfolio',
-    description: 'A legacy of code and craftsmanship',
+    title: 'THE AMAZING Web-DEV',
+    description: 'Your friendly neighborhood full stack developer!',
     type: 'website',
     locale: 'en_US',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1a1a1a',
+  themeColor: '#E23636',
   colorScheme: 'dark light',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${cormorant.variable} ${cinzel.variable} ${inter.variable} font-serif vignette`}>
-       <Navbar />
+      <body className={`${comicNeue.variable} ${montserrat.variable} ${bangers.variable} font-comic`}>
+        <Navbar />
         {children}
-        
-      <Footer />
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   )

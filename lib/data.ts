@@ -117,29 +117,24 @@ export const projects = [
     emoji: '👗',
     href: '/projects/little-fashion',
     link: 'https://mahmoudmoataz99.github.io/little-fashion/index.html',
-    source: 'https://images.icon-icons.com/2389/PNG/512/wikipedia_logo_icon_144738.png'
+    source: 'https://github.com/mahmoudmoataz99/Todo-React'
   },
 ]
 
 export const skills = [
-  // Frontend
-  { name: 'React', level: 88, color: '#00ffff', icon: '⚛', category: 'Frontend' },
-  { name: 'Angular', level: 80, color: '#ff2d78', icon: '🅰', category: 'Frontend' },
-  { name: 'Next JS', level: 70, color: '#91ab22', icon: '🅰', category: 'Frontend' },
-  { name: 'TypeScript', level: 82, color: '#c8ff00', icon: 'TS', category: 'Frontend' },
-  { name: 'JavaScript', level: 90, color: '#f5ff00', icon: 'JS', category: 'Frontend' },
-  { name: 'Tailwind', level: 85, color: '#00ffff', icon: '🌊', category: 'Frontend' },
-  { name: 'Bootstrap', level: 88, color: '#8b00ff', icon: '🅱', category: 'Frontend' },
-  { name: 'HTML', level: 95, color: '#ff6a00', icon: '🌐', category: 'Frontend' },
-  { name: 'CSS', level: 90, color: '#ff00cc', icon: '🎨', category: 'Frontend' },
-
-  // Backend
-  { name: 'Node JS', level: 78, color: '#00ff88', icon: '⬡', category: 'Backend' },
-  { name: 'Nest JS', level: 75, color: '#ff2d78', icon: '🐈', category: 'Backend' },
-
-  // Database
-  { name: 'MongoDB', level: 76, color: '#00ff88', icon: '🍃', category: 'Database' },
-  { name: 'MySQL', level: 72, color: '#00ffff', icon: '🐬', category: 'Database' },
+  { name: 'React', level: 88, icon: '⚛', category: 'Frontend' },
+  { name: 'Angular', level: 80, icon: '🅰', category: 'Frontend' },
+  { name: 'Next JS', level: 70, icon: 'N', category: 'Frontend' },
+  { name: 'TypeScript', level: 82, icon: 'TS', category: 'Frontend' },
+  { name: 'JavaScript', level: 90, icon: 'JS', category: 'Frontend' },
+  { name: 'Tailwind', level: 85, icon: 'TW', category: 'Frontend' },
+  { name: 'Bootstrap', level: 88, icon: 'BS', category: 'Frontend' },
+  { name: 'HTML', level: 95, icon: 'HTML', category: 'Frontend' },
+  { name: 'CSS', level: 90, icon: 'CSS', category: 'Frontend' },
+  { name: 'Node JS', level: 78, icon: 'Node', category: 'Backend' },
+  { name: 'Nest JS', level: 75, icon: 'Nest', category: 'Backend' },
+  { name: 'MongoDB', level: 76, icon: 'MDB', category: 'Database' },
+  { name: 'MySQL', level: 72, icon: 'SQL', category: 'Database' },
 ]
 
 export const experience = [
@@ -148,28 +143,24 @@ export const experience = [
     role: 'Frontend Developer',
     co: 'Info-Tech Global',
     desc: 'Developing and maintaining web applications with React and NestJS. Focused on performance optimization and seamless API integration.',
-    color: '#c9a84c',
   },
   {
     date: '01/2025 – 03/2025',
     role: 'React Intern',
     co: 'ABS.AI',
     desc: 'Built dynamic web applications using React, collaborating with design teams to create responsive interfaces.',
-    color: '#8b7332',
   },
   {
     date: '09/2024 – 12/2024',
     role: 'Frontend Intern',
     co: 'Yearex Group',
     desc: 'Redesigned company website using Angular, implementing responsive UI components.',
-    color: '#6b1e2a',
   },
   {
     date: '06/2019 – 07/2019',
     role: 'Summer IT Trainee',
     co: 'QNB AL-AHLI',
     desc: 'We got introduced to different sections of the IT department, and we knew more about the ways problems are solved and new technologies of each field.',
-    color: '#6b1e2a',
   },
 ]
 
@@ -178,18 +169,15 @@ export const education = [
     date: '11/2023 – 07/2024',
     certificate: 'Full Stack Diploma',
     co: 'YAT Learning Center',
-    color: '#c9a84c'
   },
   {
     date: '2018 – 2023',
     certificate: 'B.Sc. Computer Engineering',
     co: 'MSA University / Greenwich University',
-    color: '#8b7332',
   },
   {
     date: '2015 – 2018',
     certificate: 'IGCSE',
     co: 'Orouba Language Schools',
-    color: '#6b1e2a',
   }
 ]

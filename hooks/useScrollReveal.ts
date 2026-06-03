@@ -1,26 +1,30 @@
-'use client'
 import { useEffect, useRef } from 'react'
 
-export function useScrollReveal<T extends HTMLElement = HTMLDivElement>() {
-  const ref = useRef<T>(null)
-  
+export function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('in')
-          observer.unobserve(el)
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in')
+          }
+        })
       },
-      { threshold: 0.15, rootMargin: '0px 0px -80px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     )
-    
-    observer.observe(el)
-    return () => observer.disconnect()
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
+    }
   }, [])
-  
+
   return ref
 }

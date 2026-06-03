@@ -36,13 +36,11 @@ export default function Navbar() {
     document.documentElement.setAttribute('data-theme', initialTheme)
   }, [])
 
-  // After navigating to homepage, scroll to pending section
   useEffect(() => {
     if (pathname === '/') {
       const pending = sessionStorage.getItem('scrollTo')
       if (pending) {
         sessionStorage.removeItem('scrollTo')
-        // Wait for page to render
         setTimeout(() => scrollToSection(pending), 100)
       }
     }
@@ -67,24 +65,26 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 max-w-7xl mx-auto z-50 transition-all duration-500 ${
-      scrolled ? 'bg-[var(--bg-primary)]/80 backdrop-blur-xl border border-[var(--border-color)]' : 'bg-transparent'
-    }`}>
-      <div className="flex items-center justify-between px-6 md:px-12 py-4">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[var(--bg-primary)]/95 shadow-lg border-b-2 border-[var(--spider-red)] backdrop-blur-sm' : 'bg-transparent'}`}>
+      <div className="flex items-center justify-between px-6 md:px-12 py-4 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="font-serif text-xl text-[var(--godfather-gold)] tracking-widest uppercase">
-            Mahmoud
-          </span>
+          <p className="font-spider text-2xl tracking-wider transition-all group-hover:scale-105 inline-block"
+            style={{
+              background: 'linear-gradient(135deg, var(--spider-red), var(--spider-blue))',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              color: 'transparent'
+            }}>
+            Mahmoud Moataz
+          </p>
+          <div className="spider-logo w-6 h-6 animate-bounce" />
         </Link>
 
-        <ul className="hidden md:flex gap-10 list-none">
+        <ul className="hidden md:flex gap-8 list-none">
           {links.map(l => (
             <li key={l}>
-              <a
-                href={`/#${l.toLowerCase().replace('.', '')}`}
-                onClick={e => handleNavClick(e, l.toLowerCase().replace('.', ''))}
-                className="font-serif text-xs tracking-widest text-[var(--text-primary)]/80 uppercase hover:text-[var(--godfather-gold)] transition-all duration-200"
-              >
+              <a href={`/#${l.toLowerCase()}`} onClick={e => handleNavClick(e, l.toLowerCase())}
+                className="font-comic font-bold text-sm tracking-wide text-[var(--text-primary)]/80 uppercase hover:text-[var(--spider-red)] transition-all hover:scale-110 inline-block">
                 {l}
               </a>
             </li>
@@ -92,40 +92,24 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button
-            onClick={toggleTheme}
-            className="relative w-10 h-10 rounded-full border border-[var(--godfather-gold)]/30 hover:border-[var(--godfather-gold)] transition-all duration-300 flex items-center justify-center group"
-            aria-label="Toggle theme"
-          >
-            <Sun
-              size={16}
-              className={`absolute transition-all duration-300 ${
-                theme === 'light' ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-0 opacity-0'
-              } text-[var(--godfather-gold)]`}
-            />
-            <Moon
-              size={16}
-              className={`absolute transition-all duration-300 ${
-                theme === 'dark' ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'
-              } text-[var(--godfather-gold)]`}
-            />
+          <button onClick={toggleTheme}
+            className="w-10 h-10 transition-all flex items-center justify-center"
+            aria-label="Toggle theme">
+            <Sun size={16} className={`absolute transition-all duration-300 ${theme === 'light' ? 'opacity-100' : 'opacity-0'}`} />
+            <Moon size={16} className={`absolute transition-all duration-300 ${theme === 'dark' ? 'opacity-100' : 'opacity-0'}`} />
           </button>
 
-          <button onClick={() => setOpen(!open)} className="md:hidden text-[var(--godfather-gold)]">
-            {open ? <X size={24} /> : <Menu size={24} />}
+          <button onClick={() => setOpen(!open)} className="md:hidden">
+            {open ? <X size={24} className="text-[var(--spider-red)]" /> : <Menu size={24} className="text-[var(--spider-red)]" />}
           </button>
         </div>
       </div>
 
       {open && (
-        <div className="md:hidden bg-[var(--bg-primary)]/95 border-t border-[var(--border-color)] px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-[var(--bg-primary)] border-t-2 border-[var(--spider-red)] px-6 py-4 flex flex-col gap-4">
           {links.map(l => (
-            <a
-              key={l}
-              href={`/#${l.toLowerCase().replace('.', '')}`}
-              onClick={e => handleNavClick(e, l.toLowerCase().replace('.', ''))}
-              className="font-serif text-2xl text-[var(--godfather-gold)] tracking-widest"
-            >
+            <a key={l} href={`/#${l.toLowerCase()}`} onClick={e => handleNavClick(e, l.toLowerCase())}
+              className="font-spider text-3xl text-[var(--spider-red)] tracking-wider">
               {l}
             </a>
           ))}

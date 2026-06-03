@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 export default function Hero() {
   const [displayText, setDisplayText] = useState('')
-  const fullText = "Full Stack Developer & Computer Engineer"
+  const fullText = "Your Friendly Neighborhood Full Stack Developer"
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -17,44 +17,50 @@ export default function Hero() {
   }, [index])
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative px-6">
-      {/* Dramatic background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--bg-primary)] via-[var(--bg-secondary)] to-[var(--bg-primary)]" />
-      
-      {/* Soft spotlight effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--godfather-gold)]/5 rounded-full blur-3xl" />
-      
+    <section id="home" className="min-h-screen flex items-center justify-center relative px-6 overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--spider-red)]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--spider-blue)]/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="absolute bottom-20 right-10 onomatopoeia-lg text-[var(--spider-blue)] opacity-20 animate-bounce">POW!</div>
+      <div className="absolute top-1/3 right-20 text-4xl opacity-15 spider-sense">⚡</div>
+
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        {/* Main Title */}
-        <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-light tracking-tight mb-6 leading-[1.1]"
-            style={{ color: 'var(--text-primary)' }}>
+        <div className="kapow inline-block mt-6">AMAZING Web-Dev</div>
+
+        <h1 className="font-spider text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-none mb-4"
+          style={{ color: 'var(--text-primary)' }}>
           Mahmoud
           <br />
-          <span style={{ color: 'var(--godfather-gold)' }}>Moataz</span>
+          <span className="inline-block"
+            style={{
+              background: 'linear-gradient(135deg, var(--spider-red), var(--spider-blue))',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              color: 'transparent'
+            }}>
+            Moataz
+          </span>
         </h1>
-        
-        {/* Subtitle with typewriter */}
-        <div className="h-9 mb-8">
-          <p className="font-serif text-lg md:text-xl italic" style={{ color: 'var(--godfather-gold)' }}>
+
+        <div className="h-12 mb-6">
+          <p className="font-comic text-xl md:text-2xl font-bold" style={{ color: 'var(--spider-blue)' }}>
             {displayText}
             <span className="cursor-blink" />
           </p>
         </div>
-        
-        {/* Description */}
-        <p className="font-sans text-sm max-w-xl mx-auto leading-relaxed mb-12" style={{ color: 'var(--text-muted)' }}>
-          Building digital empires with precision, loyalty, and respect. 
-          Based in Cairo, serving clients worldwide.
-        </p>
-        
-        {/* CTA Buttons */}
+
+        <div className="speech-bubble max-w-xl mx-auto mb-8">
+          <p className="font-comic text-sm">
+            <strong>"My origin story:</strong> Computer Engineer by day, code-slinger by night!
+            Armed with various technologies, and an unshakable sense of responsibility against bugs and bad UX."
+          </p>
+        </div>
+
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href="#work" className="godfather-btn">
-            View the portfolio
-          </a>
-          <a href="#contact" className="godfather-btn">
-            Make an offer
-          </a>
+          <a href="#work" className="action-btn">VIEW MY POWERS</a>
+          <a href="#contact" className="secondary-btn">CALL TO ACTION</a>
         </div>
       </div>
     </section>

@@ -1,21 +1,12 @@
-import { Github, Linkedin, Gem } from 'lucide-react'
-
 export default function Footer() {
   return (
-    <footer className="py-8 px-6">
+    <footer className="py-12 px-6 border-t-4 border-[var(--spider-red)]">
       <div className="max-w-4xl mx-auto text-center">
-
-        <div className="ornate-divider">
-          <div className="line" />
-          <Gem size={14} className="text-[#c9a84c]" />
-          <div className="line" />
-        </div>
-
-        <p className="font-serif text-md text-[#8b7332] tracking-wide mt-6">
-          © {new Date().getFullYear()} Mahmoud Moataz — All rights reserved
+        <p className="font-comic text-sm text-[var(--text-muted)] tracking-wide">
+          © {new Date().getFullYear()} Mahmoud Moataz — Your Friendly Neighborhood Web-Dev
         </p>
-        <p className="font-serif text-lg text-[#8b7332]/50 mt-2 tracking-wider">
-          Lasciate ogne speranza, voi ch&apos;intrate
+        <p className="font-comic text-xs text-[var(--text-muted)]/60 mt-2">
+          "With great code comes great responsibility"
         </p>
       </div>
     </footer>
