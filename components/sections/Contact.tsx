@@ -26,13 +26,7 @@ const contacts = [
     Icon: Github,
     value: 'github.com/mahmoudmoataz99',
     href: 'https://github.com/mahmoudmoataz99',
-  },
-  {
-    label: 'Discord',
-    Icon: DiscordIcon,
-    value: 'm_abouelregal',
-    href: null,
-  },
+  }
 ]
 
 export default function Contact() {
