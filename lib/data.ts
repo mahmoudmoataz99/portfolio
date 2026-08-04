@@ -50,7 +50,7 @@ export const projects = [
     title: 'JUBARI CLONE',
     sub: 'Travel Agency Clone',
     desc: 'Responsive travel agency clone built with Angular and Bootstrap.',
-    tags: ['Angular', 'Bootstrap'],
+    tags: ['Angular', 'Bootstrap', 'Laravel', 'MYSQL'],
     color: '#00ff88',
     year: '2024',
     featured: false,
@@ -122,19 +122,21 @@ export const projects = [
 ]
 
 export const skills = [
-  { name: 'React', level: 88, icon: '⚛', category: 'Frontend' },
-  { name: 'Angular', level: 80, icon: '🅰', category: 'Frontend' },
-  { name: 'Next JS', level: 70, icon: 'N', category: 'Frontend' },
-  { name: 'TypeScript', level: 82, icon: 'TS', category: 'Frontend' },
-  { name: 'JavaScript', level: 90, icon: 'JS', category: 'Frontend' },
-  { name: 'Tailwind', level: 85, icon: 'TW', category: 'Frontend' },
-  { name: 'Bootstrap', level: 88, icon: 'BS', category: 'Frontend' },
-  { name: 'HTML', level: 95, icon: 'HTML', category: 'Frontend' },
-  { name: 'CSS', level: 90, icon: 'CSS', category: 'Frontend' },
-  { name: 'Node JS', level: 78, icon: 'Node', category: 'Backend' },
-  { name: 'Nest JS', level: 75, icon: 'Nest', category: 'Backend' },
-  { name: 'MongoDB', level: 76, icon: 'MDB', category: 'Database' },
-  { name: 'MySQL', level: 72, icon: 'SQL', category: 'Database' },
+  { name: 'React', level: 88, category: 'Frontend' },
+  { name: 'Angular', level: 80, category: 'Frontend' },
+  { name: 'Next JS', level: 70, category: 'Frontend' },
+  { name: 'TypeScript', level: 90, category: 'Frontend' },
+  { name: 'JavaScript', level: 90, category: 'Frontend' },
+  { name: 'PHP', level: 80, category: 'Backend' },
+  { name: 'Tailwind', level: 85, category: 'Frontend' },
+  { name: 'Bootstrap', level: 88, category: 'Frontend' },
+  { name: 'HTML', level: 95, category: 'Frontend' },
+  { name: 'CSS', level: 90, category: 'Frontend' },
+  { name: 'Node JS', level: 78, category: 'Backend' },
+  { name: 'Nest JS', level: 75, category: 'Backend' },
+  { name: 'Laravel', level: 75, category: 'Backend' },
+  { name: 'MongoDB', level: 76, category: 'Database' },
+  { name: 'MySQL', level: 72, category: 'Database' },
 ]
 
 export const experience = [
