@@ -65,26 +65,27 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[var(--bg-primary)]/95 shadow-lg border-b-2 border-[var(--spider-red)] backdrop-blur-sm' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      scrolled 
+        ? 'bg-[var(--dark-bg)]/95 backdrop-blur-xl border-b border-[var(--neon-purple)]/20' 
+        : 'bg-transparent'
+    }`}>
       <div className="flex items-center justify-between px-6 md:px-12 py-4 max-w-7xl mx-auto">
-        <Link href="/" className="flex items-center gap-2 group">
-          <p className="font-spider text-2xl tracking-wider transition-all group-hover:scale-105 inline-block"
-            style={{
-              background: 'linear-gradient(135deg, var(--spider-red), var(--spider-blue))',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              color: 'transparent'
-            }}>
-            Mahmoud Moataz
+        <Link href="/" className="flex items-center gap-3 group">
+          <p className="font-orbitron text-xl md:text-2xl tracking-wider transition-all group-hover:scale-105">
+            <span className="neon-text-gradient">MAHMOUD</span>
           </p>
-          <div className="spider-logo w-6 h-6 animate-bounce" />
+          <div className="w-3 h-3 rounded-full bg-[var(--neon-purple)] shadow-[0_0_20px_rgba(176,38,255,0.6)] animate-pulse" />
         </Link>
 
-        <ul className="hidden md:flex gap-8 list-none">
+        <ul className="hidden md:flex gap-8 list-none items-center">
           {links.map(l => (
             <li key={l}>
-              <a href={`/#${l.toLowerCase()}`} onClick={e => handleNavClick(e, l.toLowerCase())}
-                className="font-comic font-bold text-sm tracking-wide text-[var(--text-primary)]/80 uppercase hover:text-[var(--spider-red)] transition-all hover:scale-110 inline-block">
+              <a 
+                href={`/#${l.toLowerCase()}`} 
+                onClick={e => handleNavClick(e, l.toLowerCase())}
+                className="font-orbitron text-xs tracking-[3px] text-[var(--text-secondary)] uppercase hover:text-[var(--neon-purple)] transition-all hover:tracking-[5px]"
+              >
                 {l}
               </a>
             </li>
@@ -92,24 +93,30 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button onClick={toggleTheme}
-            className="w-10 h-10 transition-all flex items-center justify-center"
-            aria-label="Toggle theme">
+          <button 
+            onClick={toggleTheme}
+            className="w-10 h-10 rounded-full bg-[var(--dark-card)] border border-[var(--neon-purple)]/20 flex items-center justify-center transition-all hover:border-[var(--neon-purple)]/50 hover:shadow-[var(--glow-purple)]"
+            aria-label="Toggle theme"
+          >
             <Sun size={16} className={`absolute transition-all duration-300 ${theme === 'light' ? 'opacity-100' : 'opacity-0'}`} />
             <Moon size={16} className={`absolute transition-all duration-300 ${theme === 'dark' ? 'opacity-100' : 'opacity-0'}`} />
           </button>
 
           <button onClick={() => setOpen(!open)} className="md:hidden">
-            {open ? <X size={24} className="text-[var(--spider-red)]" /> : <Menu size={24} className="text-[var(--spider-red)]" />}
+            {open ? <X size={24} className="text-[var(--neon-purple)]" /> : <Menu size={24} className="text-[var(--neon-purple)]" />}
           </button>
         </div>
       </div>
 
       {open && (
-        <div className="md:hidden bg-[var(--bg-primary)] border-t-2 border-[var(--spider-red)] px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-[var(--dark-bg)]/95 backdrop-blur-xl border-t border-[var(--neon-purple)]/20 px-6 py-6 flex flex-col gap-4">
           {links.map(l => (
-            <a key={l} href={`/#${l.toLowerCase()}`} onClick={e => handleNavClick(e, l.toLowerCase())}
-              className="font-spider text-3xl text-[var(--spider-red)] tracking-wider">
+            <a 
+              key={l} 
+              href={`/#${l.toLowerCase()}`} 
+              onClick={e => handleNavClick(e, l.toLowerCase())}
+              className="font-orbitron text-2xl text-[var(--neon-purple)] tracking-wider hover:tracking-[4px] transition-all"
+            >
               {l}
             </a>
           ))}
