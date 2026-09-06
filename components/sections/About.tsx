@@ -6,47 +6,42 @@ export default function About() {
 
   return (
     <section id="about" className="py-20 px-6 relative">
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto">
         <div ref={ref} className="sr">
           <div className="chapter-divider">
             <div className="line" />
-            <div className="diamond" />
+            <div className="spider-logo" />
             <div className="line" />
           </div>
 
           <div className="narration-box text-center mb-8">
-            ORIGIN STORY · BORN IN THE CODE
+            "ABOUT ME"
           </div>
 
           <div className="panel-grid md:grid-cols-2 gap-8">
-            <div className="glitch-card">
-              <div className="pill-tag mb-4">WHO AM I?</div>
-              <p className="font-space text-sm leading-loose mb-4 text-[var(--text-secondary)]">
-                Computer Engineer by training. I build digital empires 
-                from the ground up with clean architecture, efficient systems, and a mindset that 
-                never settles for mediocrity.
+            <div className="comic-panel">
+              <div className="bam inline-block mb-4">WHO AM I?</div>
+              <p className="font-montserrat text-sm leading-loose mb-4">
+                Computer Engineer with a passion for building great software. My journey began when I discovered 
+                the power to create seamless web experiences. Now I focus on writing clean code, solving 
+                tricky problems, and building responsive applications that deliver real value.
               </p>
-              <p className="font-space text-sm leading-loose text-[var(--text-secondary)]">
-                <span className="text-[var(--neon-cyan)]">▸</span> Full-stack development 
-                <span className="text-[var(--text-muted)] mx-2">·</span>
-                <span className="text-[var(--neon-pink)]">▸</span> System architecture 
-                <span className="text-[var(--text-muted)] mx-2">·</span>
-                <span className="text-[var(--neon-purple)]">▸</span> Speed & precision
+              <p className="font-montserrat text-sm leading-loose">
+                <strong>Core strengths:</strong> Full-stack development, team collaboration, and the ability 
+                to learn new technologies quickly and apply them effectively.
               </p>
             </div>
 
-            <div className="glitch-card">
-              <div className="pill-tag-pink mb-4">MY CREED</div>
+            <div className="comic-panel">
+              <div className="kapow inline-block mb-4">MY APPROACH</div>
               <div className="speech-bubble mt-2">
-                <p className="font-space text-base text-[var(--text-secondary)]">
-                  "Every project is a beat. Every line of code is a bar. 
-                  I don't just write code. I produce hits."
+                <p className="font-comic text-base">
+                  "Every project is an opportunity to solve a real problem. I focus on writing 
+                  clean, maintainable code that delivers results, one line at a time."
                 </p>
               </div>
-              <div className="text-right mt-4">
-                <span className="neon-text-purple font-orbitron text-sm tracking-wider">
-                Mahmoud Moataz
-                </span>
+              <div className="text-right mt-4 text-sm font-bold text-[var(--spider-red)]">
+                — Mahmoud Moataz
               </div>
             </div>
           </div>

@@ -9,45 +9,47 @@ export default function Projects() {
   const featured = projects.filter((p) => p.featured)
 
   return (
-    <section id="work" className="py-10px-6 relative">
-      <div className="max-w-5xl mx-auto relative z-10">
+    <section id="work" className="py-20 px-6 relative">
+      <div className="max-w-5xl mx-auto">
         <div ref={ref} className="sr">
           <div className="chapter-divider">
             <div className="line" />
-            <div className="diamond" />
+            <div className="spider-logo" />
             <div className="line" />
           </div>
           
           <div className="narration-box text-center mb-8">
-            💿 THE CATALOG · FEATURED RELEASES
+            "FEATURED PROJECTS"
           </div>
           
-          <h2 className="font-orbitron text-4xl md:text-5xl mb-6 text-center">
-            <span className="neon-text-gradient">THE PORTFOLIO</span>
+          <h2 className="font-spider text-4xl md:text-5xl mb-6 text-center" style={{ color: 'var(--spider-red)' }}>
+            SELECTED WORK
           </h2>
-          <p className="text-center font-space text-sm mb-12 text-[var(--text-muted)]">
-            Every project is a single. Every line is a verse. Press play.
+          <p className="text-center font-comic text-sm mb-12" style={{ color: 'var(--text-muted)' }}>
+            "A selection of projects I've built and shipped"
           </p>
           
           <div className="space-y-6">
-            {featured.map((project) => (
-              <div key={project.id} className="glitch-card">
+            {featured.map((project, i) => (
+              <div key={project.id} className="comic-panel">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-3 flex-wrap">
-                      <h3 className="font-orbitron text-xl md:text-2xl">
-                        <span className="neon-text-gradient">{project.title}</span>
+                      <span className="text-3xl">{project.emoji}</span>
+                      <h3 className="font-spider text-2xl md:text-3xl" style={{ color: 'var(--spider-red)' }}>
+                        {project.title}
                       </h3>
                     </div>
-                    <p className="font-space font-bold text-sm mb-3 text-[var(--neon-pink)]">
+                    <p className="font-comic font-bold text-sm mb-3" style={{ color: 'var(--spider-blue)' }}>
                       {project.sub}
                     </p>
-                    <p className="font-space text-sm leading-relaxed mb-4 text-[var(--text-secondary)]">
+                    <p className="font-montserrat text-sm leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
                       {project.desc}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="pill-tag">
+                        <span key={tag} className="font-comic text-[10px] font-bold px-2 py-1 border border-[var(--spider-black)]"
+                          style={{ background: 'var(--bg-secondary)', color: 'var(--spider-red)' }}>
                           {tag}
                         </span>
                       ))}
@@ -55,12 +57,12 @@ export default function Projects() {
                   </div>
                   <div className="flex gap-3 shrink-0">
                     <a href={project.link} target="_blank" rel="noopener noreferrer" 
-                       className="secondary-btn text-md py-2 px-4 flex items-center gap-1.5">
-                      <ExternalLink size={16} /> LISTEN
+                       className="secondary-btn text-xs py-2 px-4 flex items-center gap-1.5">
+                      <ExternalLink size={12} /> VIEW
                     </a>
                     <a href={project.source} target="_blank" rel="noopener noreferrer" 
-                       className="secondary-btn text-md py-2 px-4 flex items-center gap-1.5">
-                      <Code2 size={16} /> SEE THE STEMS
+                       className="action-btn text-xs py-2 px-4 flex items-center gap-1.5">
+                      <Code2 size={12} /> CODE
                     </a>
                   </div>
                 </div>
@@ -70,7 +72,7 @@ export default function Projects() {
           
           <div className="text-center mt-12">
             <Link href="/projects" className="action-btn inline-block">
-              <span>↘ VIEW FULL CATALOG</span>
+              VIEW ALL PROJECTS
             </Link>
           </div>
         </div>

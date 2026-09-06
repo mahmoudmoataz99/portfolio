@@ -1,46 +1,50 @@
 import type { Metadata, Viewport } from 'next'
-import { Space_Grotesk, Orbitron } from 'next/font/google'
+import { Comic_Neue, Montserrat, Bangers } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/sections/Footer'
 import ScrollToTop from '@/components/ui/ScrollToTop'
-import FloatingParticles from '@/components/ui/FloatingParticles'
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-space',
+const comicNeue = Comic_Neue({ 
+  subsets: ['latin'], 
+  weight: ['300', '400', '700'], 
+  variable: '--font-comic',
 })
 
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '900'],
-  variable: '--font-orbitron',
+const montserrat = Montserrat({ 
+  subsets: ['latin'], 
+  weight: ['400', '600', '700', '800', '900'], 
+  variable: '--font-montserrat'
+})
+
+const bangers = Bangers({ 
+  subsets: ['latin'], 
+  weight: ['400'], 
+  variable: '--font-spider'
 })
 
 export const metadata: Metadata = {
-  title: { default: 'Mahmoud Moataz', template: '%s | Trap Code' },
-  description: 'Full Stack Engineer. Code that hits harder than 808s.',
-  keywords: ['Full Stack', 'Developer', 'Trap', 'Psychedelic', 'Portfolio', 'Web Developer'],
+  title: { default: 'Mahmoud Moataz', template: '%s | Mahmoud Moataz' },
+  description: 'Full Stack Developer building fast, reliable, and scalable web applications.',
+  keywords: ['Full Stack', 'Developer', 'Engineer', 'Portfolio', 'Software Engineer', 'Web Developer'],
   authors: [{ name: 'Mahmoud Moataz' }],
   openGraph: {
     title: 'Mahmoud Moataz',
-    description: 'Full Stack Developer',
+    description: 'Full Stack Developer building fast, reliable, and scalable web applications.',
     type: 'website',
     locale: 'en_US',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#B026FF',
+  themeColor: '#E23636',
   colorScheme: 'dark light',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${spaceGrotesk.variable} ${orbitron.variable} font-space`}>
-        <FloatingParticles />
+      <body className={`${comicNeue.variable} ${montserrat.variable} ${bangers.variable} font-comic`}>
         <Navbar />
         {children}
         <Footer />
