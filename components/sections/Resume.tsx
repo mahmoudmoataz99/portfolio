@@ -1,7 +1,6 @@
 'use client'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { Download, Eye } from 'lucide-react'
-import SpiderUpside from '../ui/SpiderUpside'
 
 export default function Resume() {
   const ref = useScrollReveal()
@@ -31,9 +30,6 @@ export default function Resume() {
             <div className="absolute -top-3 -left-3 onomatopoeia-md text-[var(--spider-red)] opacity-30">CV</div>
             <div className="absolute -bottom-3 -right-3 onomatopoeia-md text-[var(--spider-blue)] opacity-30">PDF</div>
 
-            <div className="">
-              <SpiderUpside />
-            </div>
             <h3 className="font-spider text-2xl mb-2" style={{ color: 'var(--spider-red)' }}>
               Mahmoud Moataz
             </h3>
