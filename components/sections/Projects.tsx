@@ -35,7 +35,6 @@ export default function Projects() {
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-3 flex-wrap">
-                      <span className="text-3xl">{project.emoji}</span>
                       <h3 className="font-spider text-2xl md:text-3xl" style={{ color: 'var(--spider-red)' }}>
                         {project.title}
                       </h3>
