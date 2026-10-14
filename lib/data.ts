@@ -4,7 +4,7 @@ export const projects = [
     slug: 'e-commerce',
     title: 'E-Commerce',
     sub: 'Full Stack E-Commerce Platform',
-    desc: 'A full-stack news experience with a React frontend, NestJS API, MongoDB persistence, and Axios-powered communication. It is built for speed, clarity, and a clean reading signal.',
+    desc: 'Delivered a full-stack e-commerce platform with product discovery, and cart management, featuring reusable components with designing and integrating Laravel REST APIs with MySQL for product, cart, and order management, ensuring efficient data handling and scalability.',
     tags: ['React', 'Swiper', 'Material-UI', 'Laravel', 'MySQL'],
     color: '#D4AF77',
     href: '/projects/e-commerce',
