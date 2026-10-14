@@ -16,7 +16,7 @@ function Projects() {
       <div className="split">
         <aside className="tasks">
           <h4>Details</h4>
-          <b>{p.emoji} {p.title}</b><small>{p.sub} · {p.year}{p.featured ? ' · ★ Featured' : ''}</small>
+          <b>{p.title}</b><small>{p.sub}</small>
           <p>{p.desc}</p>
           <div className="tags">{p.tags.map(t => <span key={t}>{t}</span>)}</div>
           <a className="xpbtn" href={p.link} target="_blank" rel="noopener noreferrer">Open live site</a>
