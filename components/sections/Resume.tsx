@@ -48,7 +48,7 @@ export default function Resume() {
                 className="secondary-btn inline-flex items-center gap-2 text-sm">
                 <Eye size={14} /> VIEW RESUME
               </a>
-              <a href="/cv.pdf" download="Mahmoud_Moataz_CV.pdf"
+              <a href="/cv.pdf" download="Mahmoud Moataz Resume.pdf"
                 className="action-btn inline-flex items-center gap-2 text-sm">
                 <Download size={14} /> DOWNLOAD PDF
               </a>
