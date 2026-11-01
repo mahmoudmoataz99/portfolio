@@ -22,12 +22,10 @@ export default function About() {
             <div className="comic-panel">
               <div className="bam inline-block mb-4">WHO AM I?</div>
               <p className="font-montserrat text-sm leading-loose mb-4">
-                Computer Engineer with a passion for building great software. My journey began when I discovered 
-                the power to create seamless web experiences. Now I focus on writing clean code, solving 
-                tricky problems, and building responsive applications that deliver real value.
+                Frontend developer with over a year of professional and internship experience building responsive React, Next.js and Angular interfaces in Agile teams, with guidance from senior engineers. Cut page-load time by 35% on API-driven pages at Infotech Global and shipped features for Wazifame, a full-stack recruitment platform. Backend skills in Node.js/Express, NestJS and Laravel with MongoDB and MySQL, applied in four full-stack personal projects. Actively seeking frontend, backend or full-stack roles.
               </p>
               <p className="font-montserrat text-sm leading-loose">
-                <strong>Core strengths:</strong> Full-stack development, team collaboration, and the ability 
+                <strong>Core strengths:</strong> Full-stack development, team collaboration, and the ability
                 to learn new technologies quickly and apply them effectively.
               </p>
             </div>
@@ -36,7 +34,7 @@ export default function About() {
               <div className="kapow inline-block mb-4">MY APPROACH</div>
               <div className="speech-bubble mt-2">
                 <p className="font-comic text-base">
-                  "Every project is an opportunity to solve a real problem. I focus on writing 
+                  "Every project is an opportunity to solve a real problem. I focus on writing
                   clean, maintainable code that delivers results, one line at a time."
                 </p>
               </div>
