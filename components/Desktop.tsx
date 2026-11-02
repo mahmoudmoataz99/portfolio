@@ -153,14 +153,14 @@ export default function Desktop() {
             <div className="r">{['resume', 'contact', 'bin'].map(id => <button key={id} onClick={() => openApp(id)}><span>{byId[id].icon}</span>{label[id]}</button>)}</div>
           </div>
           <div className="uf space-x-4">
-            <button onClick={() => { setMenu(false); setOff(true) }}><SquarePower className='bg-red-600' /></button>
+            <button onClick={() => { setMenu(false); setOff(true); }}><SquarePower className='bg-red-600' /></button>
           </div>
         </div>
       )}
 
       <div className="taskbar">
         <div className="sbtn flex gap-x-4 py-8">
-          <Image src="/logo.png" width={20} height={10} alt="Logo" />
+          <Image src="/logo.webp" width={20} height={10} alt="Logo" />
           <button onClick={() => setMenu(m => !m)}>start</button>
         </div>
         <div className="tasks-bar">

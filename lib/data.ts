@@ -12,6 +12,18 @@ export const projects = [
     source: 'https://github.com/mahmoudmoataz99/e-commerce-frontend',
   },
   {
+    id: 'ayno',
+    slug: 'ayno',
+    title: 'Ayno',
+    sub: 'Real-Time Infrastructure',
+    desc: 'Open-source real-time platform with a polyglot architecture designed for millions of concurrent connections with minimal latency.',
+    tags: ['Next.js', 'Tailwind CSS'],
+    color: '#Fb44a2',
+    href: '/projects/ayno',
+    link: 'https://https://ayno-ui.vercel.app/',
+    source: 'https://github.com/mahmoudmoataz99/Ayno_UI',
+  },
+  {
     id: 'news-today',
     slug: 'news-today',
     title: 'NEWS TODAY',
